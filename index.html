@@ -84,7 +84,10 @@ TF7 4JB</p></div><div class="text-sm-left text-center">Registered in England & W
  nodes.forEach(n=>{let v=n.nodeValue; swaps.forEach(([a,b])=>v=v.replaceAll(a,b)); n.nodeValue=v});
  document.querySelectorAll('a[href]').forEach(a=>{const h=a.getAttribute('href'); if(h&&h.includes('clevelandcleaning.co.uk')) a.href='#quote';});
  const logo=document.querySelector('img.logo'); if(logo){logo.src='assets/logo.webp';logo.removeAttribute('data-src');logo.srcset='';logo.style.objectFit='contain'}
- document.querySelectorAll('form').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault(); alert('Thank you. Your request has been received.')}));
+ document.title='Commercial Cleaning | The Carpet Cleaning Company';
+document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.href='tel:07802563213');
+document.querySelectorAll('form').forEach(f=>f.action='#quote');
+document.addEventListener('submit',e=>{e.preventDefault();e.stopImmediatePropagation();alert('Thank you. Your request has been received.');},true);
 })();
 </script></body></html>
 <!-- Page optimized by LiteSpeed Cache @2026-09-22 17:45:00 -->
@@ -92,3 +95,4 @@ TF7 4JB</p></div><div class="text-sm-left text-center">Registered in England & W
 <!-- Page cached by LiteSpeed Cache 7.9.1 on 2026-09-22 16:44:59 -->
 <!-- Guest Mode -->
 <!-- QUIC.cloud UCSS in queue -->
+

@@ -74,11 +74,17 @@ TF7 4JB</p></div><div class="text-sm-left text-center">Registered in England & W
 <a href="#" class="btn" onclick="return saveCookiePrefs()" style="background-color:#eaeaea"><span>Save preferences</span></a>
 <a href="#" class="btn" onclick="return consentGranted()" style="background-color:#4197CB"><span>Allow all cookies</span></a></div><div class="ascendancy-modal-footer">
 <a href="https://www.clevelandcleaning.co.uk/cookie-policy/" class="link">View data protection page</a></div></div></div></div>             <script>
-(()=>{const swaps=[['Cleveland Cleaning','The Carpet Cleaning Company'],['Cleveland','The Carpet Cleaning Company'],['01952 585588','07802 563213'],['enquiries@clevelandcleaning.co.uk','paul@thecarpetcleaningcrew.co.uk'],['West Midlands','Shropshire'],['Telford','Ludlow']];const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n,a=[];while(n=w.nextNode())if(!n.parentElement.closest('script,style'))a.push(n);a.forEach(n=>{let t=n.nodeValue;swaps.forEach(s=>t=t.replaceAll(s[0],s[1]));n.nodeValue=t});document.title='Commercial Cleaning | The Carpet Cleaning Company';document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.href='tel:07802563213');document.querySelectorAll('form').forEach(f=>{f.action='#quote';f.addEventListener('submit',e=>{e.preventDefault();alert('Thank you. Your enquiry is ready for Paul.');})});document.querySelectorAll('[id*="cookie" i],[class*="cookie" i],[id*="ascendancy" i],[class*="ascendancy" i]').forEach(e=>e.remove());})();
+(()=>{const swaps=[['Cleveland Cleaning','The Carpet Cleaning Company'],['Cleveland','The Carpet Cleaning Company'],['01952 585588','07802 563213'],['enquiries@clevelandcleaning.co.uk','paul@thecarpetcleaningcrew.co.uk'],['West Midlands','Shropshire'],['Telford','Ludlow']];const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n,a=[];while(n=w.nextNode())if(!n.parentElement.closest('script,style'))a.push(n);a.forEach(n=>{let t=n.nodeValue;swaps.forEach(s=>t=t.replaceAll(s[0],s[1]));n.nodeValue=t});document.title='Commercial Cleaning | The Carpet Cleaning Company';document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.href='tel:07802563213');document.querySelectorAll('form').forEach(f=>{f.action='#quote';f.addEventListener('submit',e=>{e.preventDefault();alert('Thank you. Your enquiry is ready for Paul.');})});document.body.id='top';
+const addAnchor=(needle,id)=>{const h=[...document.querySelectorAll('h1,h2,h3')].find(e=>e.textContent.includes(needle));if(h){const a=document.createElement('span');a.id=id;a.style.cssText='display:block;position:relative;top:-90px';h.before(a)}};
+addAnchor('Cleaning to your individual requirements','services');
+addAnchor('Request your FREE Quotation','quote');
+document.querySelectorAll('a[href]').forEach(a=>{const href=a.getAttribute('href')||'';const label=a.textContent.trim().toLowerCase();if(href.includes('clevelandcleaning.co.uk')||(!href.startsWith('#')&&!href.startsWith('tel:')&&!href.startsWith('mailto:')&&!href.startsWith('http'))){a.href=(label.includes('home')?'#top':label.includes('service')||label.includes('sector')?'#services':'#quote')}});
+document.querySelectorAll('[id*="cookie" i],[class*="cookie" i],[id*="ascendancy" i],[class*="ascendancy" i]').forEach(e=>e.remove());})();
 </script></body></html>
 <!-- Page optimized by LiteSpeed Cache @2026-09-22 17:45:00 -->
 
 <!-- Page cached by LiteSpeed Cache 7.9.1 on 2026-09-22 16:44:59 -->
 <!-- Guest Mode -->
 <!-- QUIC.cloud UCSS in queue -->
+
 
